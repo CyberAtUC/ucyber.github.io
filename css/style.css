@@ -486,6 +486,12 @@ footer img:hover {
     flex: 1 1 300px;
     border-radius: 5px;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: transform 0.4s ease-in-out;
+}
+
+#post-feed .blog-post:hover {
+    transform: scale(1.015);
+    /* Add a transform for the box-shadow */
 }
 
 #post-feed .blog-post a {
