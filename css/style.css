@@ -49,7 +49,20 @@ body h5 {
 }
 
 .sidebar-nav span {
-    color: #E31837;
+    color: rgba(227, 24, 55, 0.65);
+}
+
+.sidebar-nav > .sidebar-brand:hover span {
+    color: rgba(227, 24, 55, 1);;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -ms-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+
+.sidebar-nav > .sidebar-brand {
+    margin-bottom: 15px;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -57,7 +70,7 @@ body h5 {
     font-size: 25px;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav > .sidebar-brand:hover a {
     color: #fff;
     background: none;
     -webkit-transition: color .3s ease-in-out;
@@ -326,32 +339,19 @@ footer h4 {
     font-size: 1.3em;
 }
 
-footer a:hover,
-footer a:active {
-    text-decoration: none;
-    opacity: 0.5;
-}
-
-.img-hover:hover {
-    opacity: 0.7;
-}
-
 footer img {
     width: 30px;
     height: 30px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    opacity: 0.7;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease;
 }
 
 footer img:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* Media Queries */
@@ -401,6 +401,9 @@ footer img:hover {
         height: 42px;
     }
 
+    #blog .blog-header .social-icons {
+        display: none;
+    }
 }
 
 
@@ -471,8 +474,29 @@ footer img:hover {
 }
 
 .blog-header h1 {
-    padding: 200px;
+    padding: 180px 0 160px 0;
     color: white;
+    font-size: 4em;
+}
+
+.blog-header .social-icons {
+    display: flex;
+    padding-bottom: 20px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.blog-header .social-icons a {
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.blog-header .social-icons a:hover {
+    opacity: 1;
+}
+
+.blog-header .social-icons img {
+    width: 30px;
+    height: 30px;
 }
 
 #post-feed {
@@ -485,13 +509,13 @@ footer img:hover {
     margin: 0 20px 40px;
     flex: 1 1 300px;
     border-radius: 5px;
-    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-    transition: transform 0.4s ease-in-out;
+    box-shadow: 0 1px 1px rgba(39,44,49,.1),0 3px 16px rgba(39,44,49,.07);
+    transition: all 0.4s ease-in-out;
 }
 
 #post-feed .blog-post:hover {
-    transform: scale(1.015);
-    /* Add a transform for the box-shadow */
+    transform: scale(1.01);
+    box-shadow: 0px 10px 15px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
 }
 
 #post-feed .blog-post a {
