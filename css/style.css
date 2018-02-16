@@ -321,33 +321,31 @@ body h5 {
 
 footer {
     background-color: #0E0E0E;
-    color: #4A4A4A;
-    padding: 2em 0;
+    color: #F1F1F1;
+    padding: 1.25em 0;
 }
 
 footer .foot-links {
     padding-bottom: 10px;
 }
 
-footer a {
-    color: #BCABAE;
-}
-
 footer h4 {
-    letter-spacing: 0.5px;
     padding: 0.5em 0;
-    font-size: 1.3em;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    opacity: 0.7;
 }
 
 footer img {
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     opacity: 0.7;
-    -webkit-transition: all 0.15s ease;
-    -moz-transition: all 0.15s ease;
-    -ms-transition: all 0.15s ease;
-    -o-transition: all 0.15s ease;
-    transition: all 0.15s ease;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -ms-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
 }
 
 footer img:hover {
@@ -369,7 +367,7 @@ footer img:hover {
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 
     .header h1 {
         font-size: 2.8em;
@@ -397,8 +395,8 @@ footer img:hover {
     }
 
     footer img {
-        width: 42px;
-        height: 42px;
+        width: 30px;
+        height: 30px;
     }
 
     #blog .blog-header .social-icons {
